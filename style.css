@@ -2,4 +2,8 @@
     width: 960px;
     height: 960px;
     background-color: powderblue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
