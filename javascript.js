@@ -2,13 +2,14 @@ const body = document.querySelector('body');
 const script = document.querySelector('script');
 
 // Create grid.
+const WIDTH = 720;
 const grid = document.createElement('div');
 grid.setAttribute('id', 'grid');
+grid.setAttribute('style', `width: ${WIDTH}px; height: ${WIDTH}px;`)
 body.insertBefore(grid, script);
 
 // Fill grid with squares.
 const SIZE = 16;
-const WIDTH = 960;
 const SQUARE_WIDTH = Math.floor(WIDTH / SIZE);
 for (let i = 0; i < SIZE * SIZE; i++) {
     const square = document.createElement('div');
