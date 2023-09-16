@@ -22,6 +22,6 @@
 }
 
 .square.hover {
-    transition: background-color 0.05s;
+    transition: background-color 0.1s;
     background-color: darkslategray;
 }
