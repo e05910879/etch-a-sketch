@@ -19,7 +19,7 @@ const SQUARE_WIDTH = Math.floor(WIDTH / SIZE);
 for (let i = 0; i < SIZE * SIZE; i++) {
     const square = document.createElement('div');
     square.setAttribute('class', 'square');
-    square.setAttribute('style', `width: ${SQUARE_WIDTH}px; height: ${SQUARE_WIDTH}px; background-color: white;`);
+    square.setAttribute('style', `width: ${SQUARE_WIDTH}px; height: ${SQUARE_WIDTH}px;`);
     grid.appendChild(square);
 }
 
