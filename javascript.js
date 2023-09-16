@@ -23,4 +23,14 @@ for (let i = 0; i < SIZE * SIZE; i++) {
     grid.appendChild(square);
 }
 
+// Hover
+const squares = document.querySelectorAll('.square');
+squares.forEach((square) => {
+    square.addEventListener('mouseenter', () => {
+        square.classList.add('hover');
+    });
+    square.addEventListener('mouseleave', () => {
+        square.classList.remove('hover');
+    });
+});
 
