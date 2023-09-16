@@ -11,7 +11,7 @@ const WIDTH = 720;
 const grid = document.createElement('div');
 grid.setAttribute('id', 'grid');
 grid.setAttribute('style', `width: ${WIDTH}px; height: ${WIDTH}px;`)
-body.insertBefore(grid, script);
+container.appendChild(grid);
 
 // Fill grid with squares.
 const SIZE = 16;
