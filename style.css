@@ -18,8 +18,10 @@
 .square {
     box-sizing: border-box;
     border: 0.5px solid darkgrey;
+    transition: background-color 10s;
 }
 
 .square.hover {
-    background-color: powderblue;
+    transition: background-color 0.05s;
+    background-color: darkslategray;
 }
