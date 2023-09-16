@@ -1,6 +1,10 @@
 const body = document.querySelector('body');
 const script = document.querySelector('script');
 
+// Create container to contain grid.
+const container = document.createElement('div');
+container.setAttribute('id', 'container');
+
 // Create grid.
 const WIDTH = 720;
 const grid = document.createElement('div');
