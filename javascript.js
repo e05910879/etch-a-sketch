@@ -4,6 +4,7 @@ const script = document.querySelector('script');
 // Create container to contain grid.
 const container = document.createElement('div');
 container.setAttribute('id', 'container');
+body.insertBefore(container, script);
 
 // Create grid.
 const WIDTH = 720;
