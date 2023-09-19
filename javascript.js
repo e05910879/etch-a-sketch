@@ -26,18 +26,6 @@ function createSquares(width, numSquares) {
     }
 }
 
-function addHoverEffect() {
-    const squares = document.querySelectorAll('.square');
-    squares.forEach((square) => {
-        square.addEventListener('mouseenter', () => {
-            square.classList.add('hover');
-        });
-        square.addEventListener('mouseleave', () => {
-            square.classList.remove('hover');
-        });
-    });
-}
-
 function createPerimeterBorders(numSquares) {
     const squares = document.querySelectorAll('.square');
     const lastRowFirstSquare = (numSquares * numSquares) - numSquares;
@@ -62,8 +50,21 @@ function createPerimeterBorders(numSquares) {
     });
 }
 
+function addHoverEffect() {
+    const squares = document.querySelectorAll('.square');
+    squares.forEach((square) => {
+        square.addEventListener('mouseenter', () => {
+            square.classList.add('hover');
+        });
+        square.addEventListener('mouseleave', () => {
+            square.classList.remove('hover');
+        });
+    });
+}
+
 // Create grid.
 function createGrid(width, numSquares) {
+    createContainer();
     createPerimeter(width);
     createSquares(width, numSquares);
     createPerimeterBorders(numSquares);
