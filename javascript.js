@@ -35,9 +35,15 @@ function addHoverEffect() {
     });
 }
 
+function createSquareBorders() {
+
+}
+
 // Create grid.
 function createGrid(width, numSquares) {
     createPerimeter(width);
     createSquares(width, numSquares);
     addHoverEffect();
 }
+
+createGrid(720, 19);
