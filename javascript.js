@@ -18,6 +18,7 @@ function createSquares(width, numSquares) {
     for (let i = 0; i < numSquares * numSquares; i++) {
         const square = document.createElement('div');
         square.setAttribute('class', 'square');
+        square.setAttribute('id', i);
         square.setAttribute('style', `width: ${SQUARE_WIDTH}px; height: ${SQUARE_WIDTH}px;`);
         perimeter.appendChild(square);
     }
