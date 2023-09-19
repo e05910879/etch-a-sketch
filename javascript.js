@@ -81,7 +81,6 @@ function deleteGrid() {
 function createButton() {
     const buttonContainer = document.createElement('div');
     buttonContainer.setAttribute('id', 'button-container');
-    container.appendChild(buttonContainer);
 
     const button = document.createElement('button');
     button.textContent = "Change Size";
@@ -89,6 +88,7 @@ function createButton() {
 
     const container = document.querySelector('#container');
     const perimeter = document.querySelector('#perimeter');
+    container.appendChild(buttonContainer);
     buttonContainer.appendChild(button);
 }
 
