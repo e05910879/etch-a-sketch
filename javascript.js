@@ -36,15 +36,36 @@ function addHoverEffect() {
     });
 }
 
-function createSquareBorders() {
-
+function createPerimeterBorders(numSquares) {
+    const squares = document.querySelectorAll('.square');
+    const lastRowFirstSquare = (numSquares * numSquares) - numSquares;
+    const lastRowLastSquare = (numSquares * numSquares) - 1;
+    squares.forEach((square) => {
+        // top row
+        if (square.id >= 0 && square.id < numSquares) {
+            square.style.borderTop = "1px solid darkgray";
+        }
+        // leftmost column
+        if (square.id % numSquares === 0) {
+            square.style.borderLeft = "1px solid darkgray";
+        }
+        // rightmost column
+        if (square.id % numSquares === (numSquares-1)) {
+            square.style.borderRight = "1px solid darkgray";
+        }
+        // bottom row
+        if (square.id >= lastRowFirstSquare && square.id <= lastRowLastSquare) {
+            square.style.borderBottom = "1px solid darkgray";
+        }
+    });
 }
 
 // Create grid.
 function createGrid(width, numSquares) {
     createPerimeter(width);
     createSquares(width, numSquares);
+    createPerimeterBorders(numSquares);
     addHoverEffect();
 }
 
-createGrid(720, 19);
+createGrid(720, 10);
