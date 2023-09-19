@@ -63,7 +63,7 @@ function addHoverEffect() {
 }
 
 // Create grid.
-function createGrid(width, numSquares) {
+function createGrid(width = 720, numSquares = 30) {
     createContainer();
     createPerimeter(width);
     createSquares(width, numSquares);
