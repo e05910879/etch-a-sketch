@@ -66,7 +66,6 @@ function addHoverEffect() {
 // Create grid.
 function createGrid(width = 720, numSquares = 30) {
         createContainer();
-        addButton();
         createPerimeter(width);
         createSquares(width, numSquares);
         createPerimeterBorders(numSquares);
@@ -78,7 +77,7 @@ function deleteGrid() {
     container.remove();
 }
 
-function addButton() {
+function createButton() {
     const button = document.createElement('button');
     button.textContent = "Change Size";
     const container = document.querySelector('#container');
@@ -86,4 +85,19 @@ function addButton() {
     container.appendChild(button);
 }
 
+function changeGridSize() {
+    let size = prompt("Please enter a size (1-100): ", 30);
+    while (size < 0 || size > 100) {
+        size = prompt("Please enter a valid size (1-100): ", 30);
+    }
+    deleteGrid();
+    createGrid(720, size);
+}
+
 createGrid(720, 30);
+
+/*
+createContainer();
+createButton();
+createGrid();
+*/
