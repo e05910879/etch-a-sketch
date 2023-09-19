@@ -1,3 +1,5 @@
+let numMouseEnters = 0;
+
 function createContainer() {
     // Create container to contain grid.
     const body = document.querySelector('body');
@@ -59,12 +61,23 @@ function createPerimeterBorders(numSquares) {
 
 function addHoverEffect() {
     const squares = document.querySelectorAll('.square');
+    let r, g, b;
     squares.forEach((square) => {
         square.addEventListener('mouseenter', () => {
-            square.classList.add('hover');
+            // square.classList.add('hover');
+            r = (Math.floor((Math.random()*255)) % 255);
+            g = (Math.floor((Math.random()*255)) % 255);
+            b = (Math.floor((Math.random()*255)) % 255);
+            console.log(`r: ${r}, g: ${g}, b: ${b}`);
+
+            square.style.backgroundColor = `rgb(${r} ${g} ${b})`;
+            square.style.transition = `background-color 0.1s`;
+            numMouseEnters++;
         });
         square.addEventListener('mouseleave', () => {
-            square.classList.remove('hover');
+            // square.classList.remove('hover');
+            square.style.backgroundColor = 'white';
+            square.style.transition = `background-color 10s`;
         });
     });
 }
