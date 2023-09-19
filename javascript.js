@@ -1,10 +1,12 @@
 const body = document.querySelector('body');
 const script = document.querySelector('script');
 
-// Create container to contain grid.
-const container = document.createElement('div');
-container.setAttribute('id', 'container');
-body.insertBefore(container, script);
+function createContainer() {
+    // Create container to contain grid.
+    const container = document.createElement('div');
+    container.setAttribute('id', 'container');
+    body.insertBefore(container, script);
+}
 
 function createPerimeter(width) {
     const perimeter = document.createElement('div');
