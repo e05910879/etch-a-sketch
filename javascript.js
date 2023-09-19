@@ -16,7 +16,7 @@ function createPerimeter(width) {
 }
 
 function createSquares(width, numSquares) {
-    const SQUARE_WIDTH = Math.floor(width / numSquares);
+    const SQUARE_WIDTH = width / numSquares;
     const perimeter = document.querySelector('#perimeter');
     for (let i = 0; i < numSquares * numSquares; i++) {
         const square = document.createElement('div');
@@ -31,21 +31,23 @@ function createPerimeterBorders(numSquares) {
     const squares = document.querySelectorAll('.square');
     const lastRowFirstSquare = (numSquares * numSquares) - numSquares;
     const lastRowLastSquare = (numSquares * numSquares) - 1;
+    let id;
     squares.forEach((square) => {
         // top row
-        if (square.id >= 0 && square.id < numSquares) {
+        id = parseInt(square.id);
+        if (id >= 0 && id < numSquares) {
             square.style.borderTop = "1px solid darkgray";
         }
         // leftmost column
-        if (square.id % numSquares === 0) {
+        if (id % numSquares === 0) {
             square.style.borderLeft = "1px solid darkgray";
         }
         // rightmost column
-        if (square.id % numSquares === (numSquares-1)) {
+        if (id % numSquares === (numSquares-1)) {
             square.style.borderRight = "1px solid darkgray";
         }
         // bottom row
-        if (square.id >= lastRowFirstSquare && square.id <= lastRowLastSquare) {
+        if (id >= lastRowFirstSquare && id <= lastRowLastSquare) {
             square.style.borderBottom = "1px solid darkgray";
         }
     });
