@@ -8,11 +8,15 @@ function createContainer() {
 }
 
 function createPerimeter(width) {
+    const perimeterContainer = document.createElement('div');
+    perimeterContainer.setAttribute('id', 'perimeter-container');
+
     const perimeter = document.createElement('div');
     perimeter.setAttribute('id', 'perimeter');
     perimeter.setAttribute('style', `width: ${width}px; height: ${width}px;`)
     const container = document.querySelector('#container');
-    container.appendChild(perimeter);
+    container.appendChild(perimeterContainer);
+    perimeterContainer.appendChild(perimeter);
 }
 
 function createSquares(width, numSquares) {
