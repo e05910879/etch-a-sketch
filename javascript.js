@@ -1,8 +1,7 @@
-const body = document.querySelector('body');
-const script = document.querySelector('script');
-
 function createContainer() {
     // Create container to contain grid.
+    const body = document.querySelector('body');
+    const script = document.querySelector('script');    
     const container = document.createElement('div');
     container.setAttribute('id', 'container');
     body.insertBefore(container, script);
@@ -66,16 +65,17 @@ function addHoverEffect() {
 
 // Create grid.
 function createGrid(width = 720, numSquares = 30) {
-    createContainer();
-    createPerimeter(width);
-    createSquares(width, numSquares);
-    createPerimeterBorders(numSquares);
-    addHoverEffect();
+        createContainer();
+        createPerimeter(width);
+        createSquares(width, numSquares);
+        createPerimeterBorders(numSquares);
+        addHoverEffect();
 }
+
 
 function deleteGrid() {
     container.remove();
 }
 
 
-createGrid();
+createGrid(720, 30);
