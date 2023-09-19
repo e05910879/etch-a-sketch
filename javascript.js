@@ -12,11 +12,13 @@ function createPerimeter(width) {
     const perimeter = document.createElement('div');
     perimeter.setAttribute('id', 'perimeter');
     perimeter.setAttribute('style', `width: ${width}px; height: ${width}px;`)
+    const container = document.querySelector('#container');
     container.appendChild(perimeter);
 }
 
 function createSquares(width, numSquares) {
     const SQUARE_WIDTH = Math.floor(width / numSquares);
+    const perimeter = document.querySelector('#perimeter');
     for (let i = 0; i < numSquares * numSquares; i++) {
         const square = document.createElement('div');
         square.setAttribute('class', 'square');
@@ -76,4 +78,4 @@ function deleteGrid() {
 }
 
 
-createGrid(720, 30);
+createGrid();
