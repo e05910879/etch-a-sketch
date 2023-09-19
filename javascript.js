@@ -68,4 +68,9 @@ function createGrid(width, numSquares) {
     addHoverEffect();
 }
 
-createGrid(720, 10);
+function deleteGrid() {
+    container.remove();
+}
+
+
+createGrid(720, 30);
